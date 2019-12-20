@@ -1,0 +1,10 @@
+version: "3"
+services:
+  loja-virtual-db:
+  image: "mysql:5.7.19"
+  environment:
+    MYSQL_ROOT_PASSWORD: "root123"
+  ports:
+    - 3306:3306
+  volumes:
+    - "./conf.d:/etc/mysql/conf.d"
