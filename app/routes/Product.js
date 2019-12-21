@@ -5,17 +5,9 @@ const ProductController = require("../controllers/ProductController");
 
 router
   .get("/produtos", ProductController.find)
-  .get("/produtos/:id", (req, res) => {
-    res.json(req.params);
-  })
-  .post("/produtos", (req, res) => {
-    res.json({ message: "POST /produtos com sucesso" });
-  })
-  .put("/produtos/:id", (req, res) => {
-    res.json(req.params);
-  })
-  .delete("/produtos/:id", (req, res) => {
-    res.json(req.params);
-  });
+  .get("/produto/:id", ProductController.findOne)
+  .post("/produto", ProductController.create)
+  .put("/produto", ProductController.update)
+  .delete("/produto/:id", ProductController.remove);
 
 module.exports = router;

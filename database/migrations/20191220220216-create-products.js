@@ -15,6 +15,10 @@ module.exports = {
         allowNull: false,
         type: DataTypes.STRING
       },
+      price: {
+        allowNull: false,
+        type: DataTypes.FLOAT
+      },
       imageURL: {
         allowNull: false,
         type: DataTypes.STRING
